@@ -1,0 +1,37 @@
+
+The code examples used in a talk about LPeg.
+
+date1.lua
+
+	Very basic LPeg code to validate a string as a date in a particular
+	format.
+
+date2.lua
+
+	A bit more complex example of LPeg that still validates a string
+	as a date, but with more validation (hours are between 0 and 23,
+	day of the month as a value between 1 and 31, etc).
+
+date3.lua
+
+	Similar to date2.lua, but this time we actually capture the data
+	and return a table similar to what os.date() will return.  This
+	shows how to capture data instead of just matching a string.
+
+strftime.lua
+
+	A complex example where LPeg is used to parse a format string
+	for strftime() and return a new LPeg expression that can be used
+	to parse a date printed by that format string.  This is about as
+	simple an example of a DSL as you can get.
+
+test.lua
+
+	A program to test strftime.lua.
+
+email-addr.lua
+
+	Validate email addresses per the RFC-822 spec (including
+	comments).  Replaces one very large and infamous regex that
+	claims to validate email address (but doesn't handle comments).
+
